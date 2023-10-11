@@ -1,3 +1,8 @@
+VITE_BACKEND_URL = "https://vale-ecommerce.azurewebsites.net"
+
+PACKAGE JSON:
+
+
 {
   "name": "SenaOnPrintingFronten",
   "private": true,
@@ -57,3 +62,19 @@
     "vite": "^4.4.11"
   }
 }
+
+
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react-swc'
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  build: {
+    outDir: 'build' // Configura la carpeta de salida como 'build'
+  }
+})
+
+
+
+npm run build && npm run export
